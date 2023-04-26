@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #353535;
+}
+.container {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 600px;
+}
+.card {
+  /* padding: 1rem; */
+  box-shadow: 2px 2px 5px #00000053;
+  border-radius: 1rem;
+  background-color: #f2f2f2;
+  height: calc(100vh - 2rem);
+  display: flex;
+  flex-direction: column;
+}
+.TodoList {
+  flex: 1;
+  overflow: auto;
+}
+.Header,
+.AddItemForm {
+  padding: 2rem;
+}
+
+.Header {
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+
+.clear-btn {
+  background-color: hsl(0, 33%, 42%);
+  color: #fff;
+  border: 0;
+  padding: .3em .6em;
+  border-radius: .5em;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  cursor: pointer;
+  transition: background 150ms ease-out;
+}
+.clear-btn:hover {
+  background-color: hsl(0, 50%, 30%);
+}
+.clear-btn:active {
+  background-color: hsl(0, 50%, 20%);
+}
+
+.form-group {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: .6rem;
+}
+.AddItemForm {
+  border-top: 1px solid #e7e7e7;
+}
+.AddItemForm input {
+  display: block;
+  width: 100%;
+  border: 1px solid #c6c6c6;
+  padding: .4em;
+  border-radius: .5em;
+}
+.AddItemForm input:focus {
+  outline: 1px solid #8d8d8d;
+}
+.AddItemForm input[type="text"] {
+  flex: 5;
+}
+.AddItemForm input[type="number"] {
+  flex: 1;
+}
+.AddItemForm button {
+  width: 100%;
+  border: 0;
+  border-radius: .5em;
+  padding: .8em;
+  background-color: #313131;
+  color: #fff;
+  cursor: pointer;
+  transition: all ease 300ms;
+}
+.AddItemForm button:hover {
+  background-color: #292929;
+}
+.AddItemForm button:active {
+  background-color: #212121;
+}
+
+.ListItem {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: .5rem 1rem;
+  border-bottom: 1px solid #a2a2a2;
+  background-color: #e4e4e4;
+}
+
+.ListItem .title { 
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ListItem .buttons
+ {
+  display: flex;
+  gap: .5rem;
+}
+
+.btn {
+  border: 0;
+  background-color: transparent;
+  color: #888888;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+.btn-change:hover {
+  color: rgb(50, 141, 151);
+}
+.btn-delete:hover {
+  color: #982a2a;
+}
+.q-btn:hover {
+  color: #000;
+}
+.completed {
+  text-decoration: line-through;
+  color: #858585;
+}
+
+.ChangeItem {
+  flex: 1;
+}
+
+.ChangeItem input {
+  border: 0;
+  font-size: 1rem;
+  outline: none;
+}
+.btn-check {
+  position: relative;
+  top: 3px;
+  font-size: 1.3rem;
+}
+.btn-check:hover {
+  color: #399d39;
+}
+
+
+.modal-bg {
+  position: fixed;
+  inset: 0;
+  background-color: #0000002e;
+}
+
+.modal {
+  background-color: #fff;
+  max-width: 75%;
+  margin: min(10vh, 5rem) auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px #00000053;
+  text-align: center;
+}
+.modal h2,
+.modal p{
+  margin-bottom: 1rem;
+}
+.modal-buttons {
+  border-top: 1px solid #e7e7e7;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.y-btn,
+.n-btn {
+  background-color: #333;
+  color: #fff;
+  border: 0;
+  padding: .4em 1em;
+  border-radius: .7em;
+  cursor: pointer;
+  transition: background 150ms;
+}
+.y-btn {
+  background-color: hsl(120, 47%, 42%);
+}
+.y-btn:hover {
+  background-color: hsl(120, 47%, 30%);
+}
+.y-btn:active {
+  background-color: hsl(120, 47%, 20%);
+}
+.n-btn:hover {
+  background-color: #1d1d1d;
+}
+.n-btn:active {
+  background-color: #0f0f0f;
+}
